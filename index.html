@@ -6,307 +6,907 @@
 
 <title>Nokhaiz Tariq Khan | Academic Profile</title>
 
+<meta name="description" content="Academic profile of Nokhaiz Tariq Khan - researcher in supply chain analytics, logistics, artificial intelligence, forecasting and smart mobility.">
+
 <style>
+
+:root {
+    --navy: #12345b;
+    --blue: #1769aa;
+    --text: #26384a;
+    --muted: #64748b;
+    --light: #f5f8fb;
+    --border: #e2e8f0;
+}
+
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #25364a;
-    background: #ffffff;
+    color: var(--text);
     line-height: 1.7;
+    background: white;
 }
 
-/* Navigation */
+/* ---------- NAVIGATION ---------- */
+
 nav {
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
+    background: rgba(255,255,255,.97);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .nav-container {
-    max-width: 1150px;
+    max-width: 1180px;
     margin: auto;
-    padding: 17px 25px;
+    padding: 16px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.name {
-    font-size: 21px;
+.brand {
+    font-size: 20px;
     font-weight: 700;
-    color: #17365d;
+    color: var(--navy);
 }
 
 .nav-links a {
-    color: #374151;
     text-decoration: none;
-    margin-left: 24px;
-    font-size: 15px;
+    color: #334155;
+    margin-left: 23px;
+    font-size: 14px;
 }
 
 .nav-links a:hover {
-    color: #1769aa;
+    color: var(--blue);
 }
 
-/* Hero */
+/* ---------- HERO ---------- */
+
 .hero {
-    background: #f5f8fb;
-    padding: 90px 25px;
+    background: linear-gradient(135deg, #f7fafc, #edf4f9);
+    padding: 75px 25px;
 }
 
-.hero-container {
-    max-width: 1050px;
+.hero-inner {
+    max-width: 1080px;
     margin: auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 245px;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.13);
 }
 
 .hero h1 {
-    font-size: 48px;
+    margin: 0;
+    color: var(--navy);
+    font-size: 46px;
     line-height: 1.15;
-    margin: 0 0 15px;
-    color: #17365d;
 }
 
-.hero h2 {
-    font-size: 23px;
-    font-weight: 400;
-    color: #4b647d;
-    margin-bottom: 25px;
+.position {
+    margin: 12px 0 2px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #365775;
 }
 
-.hero p {
-    max-width: 760px;
-    font-size: 18px;
-    color: #526273;
+.affiliation {
+    font-size: 16px;
+    color: #53677b;
+    margin: 0 0 18px;
+}
+
+.research-line {
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.intro {
+    max-width: 720px;
+    font-size: 16px;
+    color: #4a5e71;
 }
 
 .buttons {
-    margin-top: 32px;
+    margin-top: 27px;
 }
 
-.button {
+.btn {
     display: inline-block;
-    padding: 11px 20px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    padding: 9px 16px;
+    margin: 0 7px 8px 0;
     border-radius: 5px;
     text-decoration: none;
+    font-size: 14px;
     font-weight: 600;
+    transition: .2s;
 }
 
-.primary {
-    background: #17365d;
+.btn-primary {
+    background: var(--navy);
     color: white;
 }
 
-.secondary {
-    border: 1px solid #17365d;
-    color: #17365d;
+.btn-outline {
+    border: 1px solid #9aabba;
+    color: var(--navy);
+    background: white;
 }
 
-/* Main sections */
-section {
-    max-width: 1050px;
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ---------- GENERAL ---------- */
+
+.section {
+    max-width: 1080px;
     margin: auto;
-    padding: 65px 25px;
+    padding: 68px 25px;
 }
 
-section h2 {
-    font-size: 30px;
-    color: #17365d;
-    margin-top: 0;
+.section-bg {
+    background: var(--light);
 }
+
+.section-bg .section {
+    padding-top: 68px;
+    padding-bottom: 68px;
+}
+
+.section-title {
+    color: var(--navy);
+    font-size: 29px;
+    margin: 0 0 10px;
+}
+
+.section-rule {
+    width: 55px;
+    height: 3px;
+    background: var(--blue);
+    margin-bottom: 27px;
+}
+
+.lead {
+    font-size: 17px;
+    max-width: 900px;
+    color: #43576a;
+}
+
+/* ---------- RESEARCH ---------- */
 
 .research-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 18px;
     margin-top: 30px;
 }
 
-.card {
-    border: 1px solid #e2e8f0;
-    padding: 25px;
-    border-radius: 7px;
+.research-card {
     background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 23px;
 }
 
-.card h3 {
-    color: #17365d;
+.research-card h3 {
+    color: var(--navy);
+    font-size: 17px;
     margin-top: 0;
 }
 
-.alt {
-    background: #f8fafc;
-    max-width: none;
+.research-card p {
+    font-size: 14px;
+    color: #526579;
+    margin-bottom: 0;
 }
 
-.alt-inner {
-    max-width: 1050px;
-    margin: auto;
-    padding: 65px 25px;
+/* ---------- PUBLICATIONS ---------- */
+
+.publication {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.publication:first-of-type {
+    padding-top: 5px;
+}
+
+.pub-year {
+    display: inline-block;
+    background: #eaf2f8;
+    color: var(--blue);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.publication h3 {
+    font-size: 16px;
+    color: #253d58;
+    margin: 3px 0;
+    font-weight: 600;
+}
+
+.publication p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #617184;
+}
+
+.more-link {
+    margin-top: 25px;
+}
+
+/* ---------- EXPERIENCE ---------- */
+
+.timeline-item {
+    border-left: 3px solid #d8e5ef;
+    padding: 0 0 30px 24px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: var(--blue);
+    border-radius: 50%;
+    left: -7px;
+    top: 7px;
+}
+
+.timeline-item h3 {
+    color: var(--navy);
+    margin: 0;
+    font-size: 17px;
+}
+
+.timeline-item .date {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.timeline-item p {
+    margin: 7px 0 0;
+    color: #56697c;
+    font-size: 14px;
+}
+
+/* ---------- TEACHING ---------- */
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.simple-list {
+    padding-left: 20px;
+}
+
+.simple-list li {
+    margin-bottom: 7px;
+}
+
+/* ---------- EDUCATION ---------- */
+
+.education-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px;
+    margin-bottom: 15px;
+}
+
+.education-card h3 {
+    margin: 0 0 5px;
+    color: var(--navy);
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-box {
+    background: var(--navy);
+    color: white;
+    border-radius: 9px;
+    padding: 35px;
+}
+
+.contact-box h2 {
+    margin-top: 0;
+}
+
+.contact-box a {
+    color: white;
 }
 
 footer {
-    background: #17365d;
-    color: white;
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 40px;
+    padding: 30px;
+    color: #718096;
+    font-size: 13px;
 }
 
-@media (max-width: 750px) {
-    .hero h1 {
-        font-size: 36px;
+/* ---------- MOBILE ---------- */
+
+@media(max-width: 850px) {
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin: auto;
+    }
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .research-grid {
         grid-template-columns: 1fr;
     }
 
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
     .nav-links {
         display: none;
     }
+
+    .hero h1 {
+        font-size: 37px;
+    }
 }
+
 </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="nav-container">
-        <div class="name">Nokhaiz Tariq Khan</div>
+<!-- NAVIGATION -->
 
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#teaching">Teaching</a>
-            <a href="#contact">Contact</a>
-        </div>
+<nav>
+<div class="nav-container">
+
+    <div class="brand">Nokhaiz Tariq Khan</div>
+
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
     </div>
+
+</div>
 </nav>
 
+
+<!-- HERO -->
+
 <header class="hero">
-    <div class="hero-container">
+
+<div class="hero-inner">
+
+    <div>
+        <img src="NS22124.jpg"
+             alt="Nokhaiz Tariq Khan"
+             class="profile-photo">
+    </div>
+
+    <div>
 
         <h1>Nokhaiz Tariq Khan</h1>
 
-        <h2>Researcher | Supply Chain Analytics | Artificial Intelligence</h2>
+        <div class="position">
+            Postdoctoral Fellow
+        </div>
 
-        <p>
-        My research focuses on smart, resilient and data-driven supply chains,
-        connecting quantitative modelling, artificial intelligence and emerging
-        technologies with real-world logistics and business challenges.
-        My work combines analytical methods with managerial and technology-adoption
-        perspectives to develop practical solutions for complex decision problems.
+        <p class="affiliation">
+            Interdisciplinary Research Center for Smart Mobility and Logistics<br>
+            King Fahd University of Petroleum &amp; Minerals (KFUPM), Saudi Arabia
+        </p>
+
+        <div class="research-line">
+            Supply Chain Analytics · Logistics · Artificial Intelligence · Smart Mobility
+        </div>
+
+        <p class="intro">
+            My research examines how analytics, modelling and emerging technologies
+            can make supply chains and logistics systems more intelligent, resilient
+            and sustainable. I combine quantitative modelling, data analytics and
+            technology-adoption perspectives to address real-world operational and
+            managerial problems.
         </p>
 
         <div class="buttons">
-            <a class="button primary" href="#research">Explore My Research</a>
-            <a class="button secondary" href="#publications">Publications</a>
+
+            <a class="btn btn-primary"
+               href="CV 03-09 nokhaiz.pdf"
+               target="_blank">
+               View CV
+            </a>
+
+            <a class="btn btn-outline"
+               href="https://scholar.google.com/citations?user=INiVZpsAAAAJ"
+               target="_blank">
+               Google Scholar
+            </a>
+
+            <a class="btn btn-outline"
+               href="https://orcid.org/0000-0003-0693-1490"
+               target="_blank">
+               ORCID
+            </a>
+
+            <a class="btn btn-outline"
+               href="https://www.linkedin.com/in/nokhaiz-tariq-998b5756/"
+               target="_blank">
+               LinkedIn
+            </a>
+
         </div>
 
     </div>
+
+</div>
 </header>
 
-<section id="about">
 
-    <h2>About Me</h2>
+<!-- ABOUT -->
 
-    <p>
-    I am an academic and researcher working at the intersection of supply chain
-    management, logistics, data analytics and emerging technologies. My research
-    examines how organisations can use advanced analytical methods and digital
-    technologies to improve operational performance, resilience, sustainability
-    and managerial decision-making.
-    </p>
+<section class="section" id="about">
 
-</section>
+<h2 class="section-title">About Me</h2>
+<div class="section-rule"></div>
 
-<div class="alt" id="research">
-<div class="alt-inner">
+<p class="lead">
+I am a researcher working at the intersection of logistics, supply chain
+management, operations and data analytics. My work focuses particularly on
+data-driven decision making, demand forecasting, transportation, emerging
+technologies and smart supply chains.
+</p>
 
-    <h2>Research Areas</h2>
+<p>
+My academic work combines quantitative and computational approaches with
+managerial research. This allows me to investigate not only whether an
+analytical or technological solution works, but also how it can be implemented
+within organisations and complex supply-chain environments.
+</p>
 
-    <div class="research-grid">
-
-        <div class="card">
-            <h3>Supply Chain & Logistics</h3>
-            <p>
-            Smart and resilient supply chains, logistics systems, last-mile
-            delivery, transportation and operations management.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>AI & Data Analytics</h3>
-            <p>
-            Machine learning, predictive analytics, forecasting and
-            data-driven decision-support systems.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Digital Transformation</h3>
-            <p>
-            Emerging technologies, technology adoption, Industry 4.0/5.0
-            and digitally enabled business transformation.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-</div>
-
-<section id="publications">
-
-    <h2>Selected Publications</h2>
-
-    <p>
-    My research has been published in peer-reviewed international journals
-    covering transportation, logistics, innovation, technology and supply-chain
-    management.
-    </p>
-
-    <p>
-        <strong>Publication list coming soon.</strong>
-    </p>
+<p>
+Before joining KFUPM, I served as an Assistant Professor in Pakistan and have
+experience spanning university teaching, research supervision, academic
+administration and industry operations.
+</p>
 
 </section>
 
-<div class="alt" id="teaching">
-<div class="alt-inner">
 
-    <h2>Teaching</h2>
+<!-- RESEARCH -->
 
-    <p>
-    My teaching interests include supply chain management, operations management,
-    business analytics, data science, logistics and quantitative research methods.
-    </p>
+<div class="section-bg" id="research">
+
+<section class="section">
+
+<h2 class="section-title">Research</h2>
+<div class="section-rule"></div>
+
+<p>
+My research agenda connects analytical methods with practical problems in
+logistics, transportation and operations.
+</p>
+
+<div class="research-grid">
+
+<div class="research-card">
+<h3>Supply Chain &amp; Logistics</h3>
+<p>
+Supply-chain resilience, last-mile logistics, operations management,
+transportation and digitally enabled logistics systems.
+</p>
+</div>
+
+<div class="research-card">
+<h3>AI &amp; Business Analytics</h3>
+<p>
+Machine learning, predictive analytics, decision-support systems and
+data-driven approaches to operational decision making.
+</p>
+</div>
+
+<div class="research-card">
+<h3>Demand Forecasting</h3>
+<p>
+Forecasting of intermittent, volatile and disaggregated demand using
+statistical and machine-learning approaches.
+</p>
+</div>
+
+<div class="research-card">
+<h3>Smart Mobility</h3>
+<p>
+Transportation systems, mobility analytics, last-mile delivery and
+data-driven approaches to sustainable mobility.
+</p>
+</div>
+
+<div class="research-card">
+<h3>Emerging Technologies</h3>
+<p>
+Blockchain, digital transformation, technology adoption and the role of
+emerging technologies in supply-chain management.
+</p>
+</div>
+
+<div class="research-card">
+<h3>Operations Research</h3>
+<p>
+Quantitative modelling, simulation, optimisation and decision-support
+approaches for complex operational problems.
+</p>
+</div>
 
 </div>
-</div>
-
-<section id="contact">
-
-    <h2>Contact & Academic Profiles</h2>
-
-    <p>
-    Google Scholar | ORCID | ResearchGate | LinkedIn
-    </p>
 
 </section>
+</div>
+
+
+<!-- PUBLICATIONS -->
+
+<section class="section" id="publications">
+
+<h2 class="section-title">Selected Publications</h2>
+<div class="section-rule"></div>
+
+<p>
+Selected peer-reviewed research. For the complete and most recent publication
+record, please visit my Google Scholar profile.
+</p>
+
+
+<div class="publication">
+
+<span class="pub-year">2026</span>
+
+<h3>
+A principal component analysis of the critical success factors for implementing
+modular housing projects in Saudi Arabia
+</h3>
+
+<p>
+Ghaithan, A., Abdelhalim, T. A., Wuni, I., &amp; Khan, N. T.
+</p>
+
+<p><em>Journal of Housing and the Built Environment</em></p>
+
+</div>
+
+
+<div class="publication">
+
+<span class="pub-year">2025</span>
+
+<h3>
+Beyond Lotka-Volterra: A game-theoretic exploration of two-dimensional
+airline competition
+</h3>
+
+<p>
+Khan, N. T., Al Hanbali, A., Demir, E., &amp; Kim, Y.
+</p>
+
+<p>
+<em>Transportation Research Part A: Policy and Practice</em>, 200, 104619
+</p>
+
+</div>
+
+
+<div class="publication">
+
+<span class="pub-year">2025</span>
+
+<h3>
+Blockchain solution for supply chains &amp; logistics challenges:
+An empirical investigation
+</h3>
+
+<p>
+Aslam, J., Lai, K. H., Al Hanbali, A., &amp; Khan, N. T.
+</p>
+
+<p>
+<em>Transportation Research Part E: Logistics and Transportation Review</em>,
+198, 104134
+</p>
+
+</div>
+
+
+<div class="publication">
+
+<span class="pub-year">2025</span>
+
+<h3>
+Factors influencing couriers' acceptance of crowdsourcing in last-mile
+delivery in Saudi Arabia
+</h3>
+
+<p>
+Alromema, M., Al Hanbali, A., Baubaid, A., AlGhazi, A.,
+Khan, N. T., &amp; Saleh, Z.
+</p>
+
+<p><em>The International Journal of Logistics Management</em></p>
+
+</div>
+
+
+<div class="publication">
+
+<span class="pub-year">2021</span>
+
+<h3>
+Factors influencing blockchain adoption in supply chain management practices:
+A study based on the oil industry
+</h3>
+
+<p>
+Aslam, J., Saleem, A., Khan, N. T., &amp; Kim, Y. B.
+</p>
+
+<p>
+<em>Journal of Innovation &amp; Knowledge</em>, 6(2), 124–134
+</p>
+
+</div>
+
+
+<div class="publication">
+
+<span class="pub-year">2019</span>
+
+<h3>
+Evolving competition between low-cost carriers and full-service carriers:
+The case of South Korea
+</h3>
+
+<p>
+Khan, N. T., Jung, G., Kim, J., &amp; Kim, Y. B.
+</p>
+
+<p>
+<em>Journal of Transport Geography</em>, 74, 1–9
+</p>
+
+</div>
+
+
+<div class="more-link">
+
+<a class="btn btn-primary"
+   href="https://scholar.google.com/citations?user=INiVZpsAAAAJ"
+   target="_blank">
+   View All Publications on Google Scholar
+</a>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<div class="section-bg" id="experience">
+
+<section class="section">
+
+<h2 class="section-title">Academic Experience</h2>
+<div class="section-rule"></div>
+
+
+<div class="timeline-item">
+
+<h3>Postdoctoral Fellow / Researcher</h3>
+
+<div class="date">December 2023 – Present</div>
+
+<p>
+Interdisciplinary Research Center for Smart Mobility and Logistics,
+King Fahd University of Petroleum &amp; Minerals, Saudi Arabia.
+Research activities include last-mile logistics, supply-chain digitalisation,
+analytics and emerging technologies.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>Assistant Professor</h3>
+
+<div class="date">March 2020 – December 2023</div>
+
+<p>
+Faculty of Business and Management, Information Technology University.
+Teaching, research supervision and academic administration, including
+leadership responsibilities within the faculty and EMBA programme.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>Assistant Professor</h3>
+
+<p>
+Riphah School of Business and Management. Teaching responsibilities included
+supply chain management, operations management, operations research,
+engineering management and advanced research methods.
+</p>
+
+</div>
+
+</section>
+</div>
+
+
+<!-- TEACHING -->
+
+<section class="section" id="teaching">
+
+<h2 class="section-title">Teaching &amp; Supervision</h2>
+<div class="section-rule"></div>
+
+<div class="two-column">
+
+<div>
+
+<h3>Teaching Areas</h3>
+
+<ul class="simple-list">
+<li>Introduction to Data Science</li>
+<li>Business Analytics</li>
+<li>Supply Chain Management</li>
+<li>Operations Management</li>
+<li>Operations &amp; Services Management</li>
+<li>Operations Research</li>
+<li>Advanced Research Methods</li>
+<li>Engineering Management</li>
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Research Supervision</h3>
+
+<p>
+My supervision experience includes undergraduate final-year projects,
+EMBA capstone projects and master's-level research.
+</p>
+
+<p>
+Supervised research has addressed areas including ERP capability,
+supply-chain agility, energy forecasting, supply-chain integration,
+sustainable manufacturing and digital business systems.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<div class="section-bg" id="education">
+
+<section class="section">
+
+<h2 class="section-title">Education</h2>
+<div class="section-rule"></div>
+
+
+<div class="education-card">
+
+<h3>Master's &amp; Doctorate — Combined Program</h3>
+
+<strong>Sungkyunkwan University, South Korea</strong>
+
+<p>2014–2019</p>
+
+</div>
+
+
+<div class="education-card">
+
+<h3>BSc Electronics Engineering</h3>
+
+<strong>The Islamia University of Bahawalpur, Pakistan</strong>
+
+<p>2010</p>
+
+</div>
+
+</section>
+</div>
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<div class="contact-box">
+
+<h2>Contact</h2>
+
+<p>
+For research collaboration, academic opportunities and related enquiries,
+please feel free to contact me or connect through my academic profiles.
+</p>
+
+<p>
+<strong>Email:</strong>
+<a href="mailto:nokhaiz.tariq@hotmail.com">
+nokhaiz.tariq@hotmail.com
+</a>
+</p>
+
+<p>
+<a href="https://scholar.google.com/citations?user=INiVZpsAAAAJ"
+target="_blank">Google Scholar</a>
+&nbsp; · &nbsp;
+
+<a href="https://orcid.org/0000-0003-0693-1490"
+target="_blank">ORCID</a>
+&nbsp; · &nbsp;
+
+<a href="https://www.linkedin.com/in/nokhaiz-tariq-998b5756/"
+target="_blank">LinkedIn</a>
+</p>
+
+</div>
+
+</section>
+
 
 <footer>
 
-    © 2026 Nokhaiz Tariq Khan · Academic Website
+© 2026 Nokhaiz Tariq Khan · Academic Profile
 
 </footer>
 
