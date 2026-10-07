@@ -246,6 +246,60 @@ nav {
     margin-bottom: 0;
 }
 
+/* Additional clickable research framework in the right-side space */
+.research-framework-side {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(210px, 19vw, 360px);
+    z-index: 3;
+    text-align: center;
+}
+
+.research-framework-side a {
+    display: block;
+    text-decoration: none;
+}
+
+.research-framework-side img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(18,52,91,0.14);
+    box-shadow: 0 10px 28px rgba(18,52,91,0.16);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.research-framework-side img:hover {
+    transform: scale(1.025);
+    box-shadow: 0 14px 34px rgba(18,52,91,0.22);
+}
+
+.research-framework-caption {
+    margin-top: 7px;
+    padding: 5px 7px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.92);
+    color: var(--navy);
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+/* On narrower screens, show the figure below the research cards instead of hiding it */
+@media(max-width: 1450px) {
+    .research-framework-side {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: min(720px, calc(100% - 50px));
+        margin: 20px auto 45px;
+    }
+}
+
 /* ---------- PUBLICATIONS ---------- */
 
 .publication {
@@ -605,6 +659,18 @@ approaches for complex operational problems.
 </div>
 
 </section>
+
+<div class="research-framework-side">
+    <a href="Research-Framework.png" target="_blank" rel="noopener"
+       title="Open full-size research framework">
+        <img src="Research-Framework.png"
+             alt="n-dimensional Lotka-Volterra, game theory, entropy, information gain and early warning signals framework">
+    </a>
+    <div class="research-framework-caption">
+        Competition Dynamics &amp; Regime Detection Framework · Click to enlarge
+    </div>
+</div>
+
 </div>
 
 
