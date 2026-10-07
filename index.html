@@ -193,32 +193,30 @@ nav {
 
 /* ---------- RESEARCH ---------- */
 
-/* Research background image */
+/* Research section with subtle research-figure background */
 #research {
     position: relative;
-    background-image: url("Figure 9.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-color: #f5f8fb;
+    overflow: hidden;
 }
 
+/* Only the image is transparent; text remains fully opaque */
+#research::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("Figure 9.jpg");
+    background-size: 75% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.18;
+    z-index: 0;
+}
+
+/* Keep all research content above the background figure */
 #research .section {
     position: relative;
     z-index: 1;
-}
-
-/* Keep text readable while allowing the research figure to remain visible */
-#research .section-title,
-#research .section > p {
-    background: rgba(255,255,255,0.88);
-    display: table;
-    padding: 6px 10px;
-    border-radius: 5px;
-}
-
-#research .research-card {
-    background: rgba(255,255,255,0.90);
-    box-shadow: 0 6px 18px rgba(18,52,91,0.10);
 }
 
 .research-grid {
@@ -229,10 +227,11 @@ nav {
 }
 
 .research-card {
-    background: white;
+    background: rgba(255,255,255,0.90);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 23px;
+    box-shadow: 0 6px 18px rgba(18,52,91,0.07);
 }
 
 .research-card h3 {
