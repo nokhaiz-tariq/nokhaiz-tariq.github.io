@@ -193,6 +193,34 @@ nav {
 
 /* ---------- RESEARCH ---------- */
 
+/* Research background image */
+#research {
+    position: relative;
+    background-image: url("Figure 9.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#research .section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Keep text readable while allowing the research figure to remain visible */
+#research .section-title,
+#research .section > p {
+    background: rgba(255,255,255,0.88);
+    display: table;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+#research .research-card {
+    background: rgba(255,255,255,0.90);
+    box-shadow: 0 6px 18px rgba(18,52,91,0.10);
+}
+
 .research-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
