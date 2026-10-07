@@ -246,26 +246,35 @@ nav {
     margin-bottom: 0;
 }
 
-/* Additional clickable research framework in the right-side space */
-.research-framework-side {
+/* Additional clickable research visuals in the left and right side spaces */
+.research-side-visual {
     position: absolute;
-    right: 200px;
-    top: 40%;
-    transform: translateY(-40%);
-    width: clamp(230px, 25vw, 390px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(220px, 21vw, 380px);
     z-index: 3;
     text-align: center;
 }
 
-.research-framework-side a {
+.research-side-left {
+    left: 24px;
+}
+
+.research-side-right {
+    right: 24px;
+}
+
+.research-side-visual a {
     display: block;
     text-decoration: none;
 }
 
-.research-framework-side img {
+.research-side-visual img {
     display: block;
     width: 100%;
     height: auto;
+    max-height: 430px;
+    object-fit: contain;
     border-radius: 8px;
     background: rgba(255,255,255,0.96);
     border: 1px solid rgba(18,52,91,0.14);
@@ -273,12 +282,12 @@ nav {
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.research-framework-side img:hover {
+.research-side-visual img:hover {
     transform: scale(1.025);
     box-shadow: 0 14px 34px rgba(18,52,91,0.22);
 }
 
-.research-framework-caption {
+.research-side-caption {
     margin-top: 7px;
     padding: 5px 7px;
     border-radius: 5px;
@@ -288,15 +297,24 @@ nav {
     line-height: 1.35;
 }
 
-/* On narrower screens, show the figure below the research cards instead of hiding it */
-@media(max-width: 1450px) {
-    .research-framework-side {
+/* If side margins become too narrow, place both visuals below the research cards */
+@media(max-width: 1550px) {
+    .research-side-visual {
         position: relative;
+        left: auto;
         right: auto;
         top: auto;
         transform: none;
         width: min(720px, calc(100% - 50px));
-        margin: 20px auto 45px;
+        margin: 20px auto;
+    }
+
+    .research-side-left {
+        margin-top: 25px;
+    }
+
+    .research-side-right {
+        margin-bottom: 45px;
     }
 }
 
@@ -660,14 +678,25 @@ approaches for complex operational problems.
 
 </section>
 
-<div class="research-framework-side">
-    <a href="Research-Framework.png" target="_blank" rel="noopener"
-       title="Open full-size research framework">
-        <img src="Research-Framework.png"
-             alt="n-dimensional Lotka-Volterra, game theory, entropy, information gain and early warning signals framework">
+<div class="research-side-visual research-side-left">
+    <a href="Parcel-Locker-Research.png" target="_blank" rel="noopener"
+       title="Open full-size parcel locker research diagram">
+        <img src="Parcel-Locker-Research.png"
+             alt="Customer adoption of parcel lockers research framework">
     </a>
-    <div class="research-framework-caption">
-        Competition Dynamics &amp; Regime Detection Framework · Click to enlarge
+    <div class="research-side-caption">
+        Parcel Locker Customer Adoption Research · Click to enlarge
+    </div>
+</div>
+
+<div class="research-side-visual research-side-right">
+    <a href="Competition-Framework.png" target="_blank" rel="noopener"
+       title="Open full-size competition framework">
+        <img src="Competition-Framework.png"
+             alt="Competition dynamics, entropy, regime detection, information gain and early warning signals framework">
+    </a>
+    <div class="research-side-caption">
+        Competition Dynamics &amp; Decision Support Framework · Click to enlarge
     </div>
 </div>
 
